@@ -1,0 +1,34 @@
+{
+    "name": "AttackInputs",
+    "maps": [
+        {
+            "name": "PlayerAttacks",
+            "id": "f270fb62-8fee-4db1-a46f-2932c0edc919",
+            "actions": [
+                {
+                    "name": "Slash",
+                    "type": "Button",
+                    "id": "82c626ac-5736-46ae-88d0-a6c8e23baa32",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "45ba6843-99d5-4ddf-981b-0859d6721f97",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Slash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
