@@ -33,7 +33,6 @@ public class AgentManager : MonoBehaviour
             {
                 a.SetDestination(a.transform.position);
             }
-            
         }
     }
 
