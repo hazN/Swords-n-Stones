@@ -59,8 +59,10 @@ namespace StarterAssets
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
-		// cinemachine
-		private float _cinemachineTargetYaw;
+        public bool canMove = false;
+
+        // cinemachine
+        private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
 
 		// player
@@ -119,7 +121,22 @@ namespace StarterAssets
 
 			JumpAndGravity();
 			GroundedCheck();
-			Move();
+			if(canMove)
+				Move();
+			else
+			{
+				//Debug.Log("I cannot move anymore!!");
+			}
+		}
+
+		public void StopMovement()
+		{
+			canMove = false;
+		}
+
+		public void ResumeMovement()
+        {
+            canMove = true;
 		}
 
 		private void LateUpdate()

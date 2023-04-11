@@ -9,13 +9,13 @@ public class ZombieAttack : MonoBehaviour
     public float cooldown = 2f;
     private float nextAttackTime = 0f;
     private Animator animator;
-    private Transform target;
+    private GameObject target;
     private float speed;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player");
         animator.SetFloat("Speed", 0f);
     }
 
@@ -26,7 +26,7 @@ public class ZombieAttack : MonoBehaviour
 
         if (Time.time >= nextAttackTime)
         {
-            float distance = Vector3.Distance(transform.position, target.position);
+            float distance = Vector3.Distance(transform.position, target.transform.position);
             if (distance <= range)
             {
                 animator.SetTrigger("ZombieAttack");
@@ -41,7 +41,11 @@ public class ZombieAttack : MonoBehaviour
         var health = target.GetComponent<Health>();
         if (health != null)
         {
-            health.TakeDamage(dmg);
+            float distance = Vector3.Distance(transform.position, target.transform.position);
+            if (distance <= range)
+            {
+                health.TakeDamage(dmg);
+            }
         }
     }
 }
