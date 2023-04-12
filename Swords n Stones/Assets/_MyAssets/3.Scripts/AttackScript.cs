@@ -104,7 +104,7 @@ public class AttackScript : MonoBehaviour
 
     public void Attack()
     {
-
+        FindObjectOfType<AudioManager>().Play("PlayerAttack");
         Collider[] zombies = Physics.OverlapSphere(gameObject.transform.position, 2.0f);
         foreach (Collider zombie in zombies)
         {
