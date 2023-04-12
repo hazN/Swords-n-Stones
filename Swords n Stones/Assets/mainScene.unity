@@ -9613,12 +9613,30 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerJump
     clip: {fileID: 8300000, guid: d3b37c6a7f0527e46b5703f4df926a35, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerLanded
+    clip: {fileID: 8300000, guid: 90337a0f6aa3cbd40a7dddd7a436abd7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDead
+    clip: {fileID: 8300000, guid: 2925fc018504c0e4fa72f14f777722de, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ZombieDead
+    clip: {fileID: 8300000, guid: 22f9f6f2e2371b7408ab5a2544cd51c5, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Playerlanded
-    clip: {fileID: 8300000, guid: 90337a0f6aa3cbd40a7dddd7a436abd7, type: 3}
+  - name: ZombieAttack
+    clip: {fileID: 8300000, guid: 45010ca75cf95e94786b3356f47c8f18, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0

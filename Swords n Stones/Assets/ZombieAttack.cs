@@ -39,6 +39,7 @@ public class ZombieAttack : MonoBehaviour
     {
         int dmg = Random.Range(dmgMin, dmgMax);
         var health = target.GetComponent<Health>();
+        FindObjectOfType<AudioManager>().Play("ZombieAttack");
         if (health != null)
         {
             float distance = Vector3.Distance(transform.position, target.transform.position);
@@ -47,5 +48,10 @@ public class ZombieAttack : MonoBehaviour
                 health.TakeDamage(dmg);
             }
         }
+    }
+
+    private void zombieDead()
+    {
+        FindObjectOfType<AudioManager>().Play("ZombieDead");
     }
 }
