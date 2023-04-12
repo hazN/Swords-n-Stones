@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -31,6 +30,11 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             isDead = true;
+            if (gameObject.CompareTag("AI"))
+            {
+                KillCounter killCounter = GameObject.Find("ZombieManager").GetComponent<KillCounter>();
+                killCounter.UpdateZombiesKilled();
+            }
             GetComponent<BoxCollider>().enabled = false;
             var thirdPersonController = GetComponent<ThirdPersonController>();
             if(thirdPersonController!= null)
