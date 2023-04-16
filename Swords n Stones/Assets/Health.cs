@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     Animator animator;
     public Slider healthBar;
     public bool isDead = false;
+    public bool isIgnored = false;
     // Start is called before the first frame update
     void Start()
     {

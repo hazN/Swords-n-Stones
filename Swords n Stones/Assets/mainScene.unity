@@ -825,12 +825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3d172d9ae162647b83f1181748f956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZombiePrefab: {fileID: 7003583241508577662, guid: 9a2971e9be499b7439858b114ec4d564,
-    type: 3}
+  ZombiePrefab: {fileID: 1227740861}
   target: {fileID: 4416926083106076771}
-  MaxZombies: 30
-  MaxX: 20
-  MaxZ: 20
+  MaxZombies: 40
+  MaxX: 60
+  MaxZ: 60
 --- !u!4 &134853123
 Transform:
   m_ObjectHideFlags: 0
@@ -5390,7 +5389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219453378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300.2, y: 1.375, z: 296}
+  m_LocalPosition: {x: 358.89, y: 1.531, z: 259.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5493,6 +5492,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 457614, guid: 1e44e02e77bb6764c97f423cc75574da,
     type: 3}
   m_PrefabInstance: {fileID: 1222332114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1227740861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7003583241508577662, guid: 9a2971e9be499b7439858b114ec4d564,
+    type: 3}
+  m_PrefabInstance: {fileID: 7922060493676692587}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1236778899
 PrefabInstance:
@@ -8824,17 +8829,17 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 300.2
+      value: 358.89
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.375
+      value: 1.531
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 296
+      value: 259.7
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -11113,7 +11118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416926083106076771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 300, y: 0, z: 300}
+  m_LocalPosition: {x: 358.69, y: 0.156, z: 263.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12269,6 +12274,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 523948756}
   isDead: 0
+  isIgnored: 0
 --- !u!65 &6982812148178909350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12580,6 +12586,16 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 4416926083106076771}
+    - target: {fileID: 7922060494049008676, guid: 9a2971e9be499b7439858b114ec4d564,
+        type: 3}
+      propertyPath: SeekArea
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922060494049008676, guid: 9a2971e9be499b7439858b114ec4d564,
+        type: 3}
+      propertyPath: SeekAreaMax
+      value: 5000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a2971e9be499b7439858b114ec4d564, type: 3}
 --- !u!4 &7930214444102089841

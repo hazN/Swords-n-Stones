@@ -26,10 +26,10 @@ public class Steering : MonoBehaviour
         {
             agent.SetDestination(Target.transform.position);
         }
-        else if (d > SeekAreaMax)
+       /* else if (d > SeekAreaMax)
         {
             agent.SetDestination(agent.transform.position);
-        }
+        }*/
     }
     float distance(NavMeshAgent a, GameObject b)
     {
